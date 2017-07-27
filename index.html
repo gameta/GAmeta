@@ -52,6 +52,17 @@
         border: 1px solid #ccc;
         border-top: none;
 }
+ol.J{
+    list-style-type: none;
+    counter-reset: elementcounter;
+    padding-left: 0;
+}
+
+li.Jli:before{
+    content: "J " counter(elementcounter) ". ";
+    counter-increment:elementcounter;
+    font-weight: bold;
+}
 </style>
 <script>
 
@@ -641,11 +652,12 @@ href="http://asmedigitalcollection.asme.org/proceeding.aspx?articleid=1588063">U
             NSF-DMII Grantees Conference, St. Louis, MO, 2006. </p>
           <h4>2005</h4>
           <p><b><i>Journal Papers</i></b></p>
-          <p>Shen Z., Ameta G., Shah J. J. and Davidson J. K., "<a
+          <ol class="J">
+          <li class="Jli">Shen Z., Ameta G., Shah J. J. and Davidson J. K., "<a
 href="http://computingengineering.asmedigitalcollection.asme.org/article.aspx?articleid=1400287">A
               Comparative Study of Tolerance Analysis Methods</a>",
             Journal of Computing and Information Science in Engineering,
-            Vol. 5(3), September 2005, pp247-256. </p>
+            Vol. 5(3), September 2005, pp247-256. </li></ol>
           <p><b><i>Conference Papers</i></b></p>
           <p>Ameta G., Davidson J. K., Shah J. J., "<a
 href="http://asmedigitalcollection.asme.org/proceeding.aspx?articleid=1571881">Allocating
@@ -709,14 +721,14 @@ href="http://asmedigitalcollection.asme.org/proceeding.aspx?articleid=1651218">T
               For An Angled Face</a>", Proceedings of ASME 2004, Design
             Automation Conference, Salt Lake City, Utah, USA, September
             28-October 2, Paper No. 57199</p>
-          <p>Shen Z., Ameta G., Davidson J. K., Shah J. J., "<a
+          <p>C1: Shen Z., Ameta G., Davidson J. K., Shah J. J., "<a
 href="http://asmedigitalcollection.asme.org/proceeding.aspx?articleid=1651630">A
               Comparative Study of Tolerance Analysis Methods</a>"
             Proceedings of ASME 2004, 24th Computers and Information in
             Engineering Conference, Salt Lake City, Utah, USA, September
             28-October 2.</p>
           <p><b><i>Posters</i></b></p>
-          <p>Shen Z., Ameta G., Davidson J. K., and Shah J.J.,
+          <p>P1: Shen Z., Ameta G., Davidson J. K., and Shah J.J.,
             "Poster:Mathematical Model to Formalize Tolerance
             Specifications and Enable Full 3D Tolerance Analysis",
             NSF-DMII Grantees Conference, Dallas, TX, 2004. </p>
