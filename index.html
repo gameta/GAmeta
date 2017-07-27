@@ -13,43 +13,46 @@
   <link href="https://spdoldwsu.github.io/SPDoldWSU/css/style3.css"
   type="text/css" rel="stylesheet" />
 
-  /* Style the tab */
-  div.tab {
-      overflow: hidden;
-      border: 1px solid #ccc;
-      background-color: #f1f1f1;
-  }
-
-  /* Style the buttons inside the tab */
-  div.tab button {
-      background-color: inherit;
-      float: left;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      transition: 0.3s;
-  }
-
-  /* Change background color of buttons on hover */
-  div.tab button:hover {
-      background-color: #ddd;
-  }
-
-  /* Create an active/current tablink class */
-  div.tab button.active {
-      background-color: #ccc;
-  }
-
-  /* Style the tab content */
-  .tabcontent {
-      display: none;
-      padding: 6px 12px;
-      border: 1px solid #ccc;
-      border-top: none;
-}
   <!-- replace the key above  -->
   <!--Print tool -->
+  <style>
+
+    /* Style the tab */
+    div.tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+    }
+
+    /* Style the buttons inside the tab */
+    div.tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+    }
+
+    /* Change background color of buttons on hover */
+    div.tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    div.tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+}
+</style>
   <script type="text/javascript"
   src="https://spdoldwsu.github.io/SPDoldWSU/print.js">
 
@@ -73,6 +76,8 @@
       document.getElementById(cityName).style.display = "block";
       evt.currentTarget.className += " active";
 }
+
+document.getElementById("General").click();
   </script>
 </head>
 
@@ -105,14 +110,14 @@ src="https://spdoldwsu.github.io/SPDoldWSU/bg-logo.jpg" alt="WSU Logo" /></a></d
 
 <img src="GA.jpg" width=100>
 <div class="tab">
-
+	<button class="tablinks" onclick="openCity(event, 'General')">General</button>
   <button class="tablinks" onclick="openCity(event, 'Research Projects')">Research Projects</button>
   <button class="tablinks" onclick="openCity(event, 'Publications')">Publications</button>
   <button class="tablinks" onclick="openCity(event, 'Teaching')">Teaching</button>
   <button class="tablinks" onclick="openCity(event, 'Advising')">Advising</button>
   <button class="tablinks" onclick="openCity(event, 'Others')">Others</button>
 </div>
-
+<div id="General" class="tabcontent">
 <H4>Education:</H4>
 <ul>
 <li>Ph.D. in Mechanical Engineering, <a href="http://www.asu.edu">ASU</a>, Tempe, AZ, USA, December 2006</li>
@@ -142,6 +147,7 @@ src="https://spdoldwsu.github.io/SPDoldWSU/bg-logo.jpg" alt="WSU Logo" /></a></d
 <li>Product models and informatics</li>
 </ul>
 <p></p>
+</div>
 <h4>National & International Recognition:</h4>
 <p>Outstanding Associate Award-2017, Engineering Laboratory, NIST.</p>
 <p>Member of Standards Committee on Tolerancing for Additive Manufacturing (ASME Y14.46) since Dec 2014.</p>
