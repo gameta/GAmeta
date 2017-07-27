@@ -52,76 +52,45 @@
         border: 1px solid #ccc;
         border-top: none;
 }
-ol.J{
-    list-style-type: none;
-    counter-reset: elementcounter;
-    padding-left: 0;
+body {
+    counter-reset: J 24 C 26 B 7 Th 9 Po 11 NRC 6;
 }
 
-li.Jli:before{
-    content: "J " counter(elementcounter) ": ";
+
+Jli:before{
+    content: "J " counter(J) ": ";
     padding-right: 8px;
-    counter-increment:elementcounter;
+    counter-increment:J -1;
 }
 
-ol.C{
-    list-style-type: none;
-    counter-reset: elementcounter;
-    padding-left: 0;
-}
-
-li.Cli:before{
-    content: "C " counter(elementcounter) ": ";
+Cli:before{
+    content: "C " counter(C) ": ";
     padding-right: 8px;
-    counter-increment:elementcounter;
+    counter-increment:C -1;
 }
 
-ol.B{
-    list-style-type: none;
-    counter-reset: elementcounter;
-    padding-left: 0;
-}
-
-li.Bli:before{
-    content: "B " counter(elementcounter) ": ";
+Bli:before{
+    content: "B " counter(B) ": ";
     padding-right: 8px;
-    counter-increment:elementcounter;
+    counter-increment:B -1;
 }
 
-ol.Po{
-    list-style-type: none;
-    counter-reset: elementcounter;
-    padding-left: 0;
-}
-
-li.Poli:before{
-    content: "Po " counter(elementcounter) ": ";
+Poli:before{
+    content: "Po " counter(Po) ": ";
     padding-right: 8px;
-    counter-increment:elementcounter;
+    counter-increment:Po -1;
 }
 
-ol.Th{
-    list-style-type: none;
-    counter-reset: elementcounter;
-    padding-left: 0;
-}
-
-li.Thli:before{
-    content: "Th " counter(elementcounter) ": ";
+Thli:before{
+    content: "Th " counter(Th) ": ";
     padding-right: 8px;
-    counter-increment:elementcounter;
+    counter-increment:Th -1;
 }
 
-ol.NRC{
-    list-style-type: none;
-    counter-reset: elementcounter;
-    padding-left: 0;
-}
-
-li.NRCli:before{
-    content: "NC " counter(elementcounter) ": ";
+NRCli:before{
+    content: "NC " counter(NRC) ": ";
     padding-right: 8px;
-    counter-increment:elementcounter;
+    counter-increment:NRC -1;
 }
 
 </style>
@@ -215,25 +184,25 @@ src="https://spdoldwsu.github.io/SPDoldWSU/bg-logo.jpg" alt="WSU Logo" /></a></d
 <div id="Publications" class="tabcontent">
 <H4>Publications:</H4>
 <h4>2017</h4>
-<ol reversed class="J" start="23">
-<li class="Jli">Feng S.C., Witherell P., Ameta G., and Kim D. B., 2017, “Activity Model for Homogenization of Data Sets in Laser-based Powder Bed Fusion”, Rapid Prototyping, Vol 23(1).
-</li>
-</ol>
+
+<Jli class="Jli">Feng S.C., Witherell P., Ameta G., and Kim D. B., 2017, “Activity Model for Homogenization of Data Sets in Laser-based Powder Bed Fusion”, Rapid Prototyping, Vol 23(1).
+</Jli>
+
 <h4>2016</h4>
-<ol reversed class="J" start="22">
-<li class="Jli">Witherell P., Herron J., and Ameta G., 2016, “Towards Annotations and Product Definitions for Additive Manufacturing”, Procedia CIRP 43, 339-344.</li>
-<li class="Jli">Huang H. and Ameta G., 2016, "An XML Based Machining Energy Estimation Tool From Process Plans", International Journal of Computer Integrated Manufacturing, Vol 29, Issue 1, pp 107-118. </li>
-</ol>
+
+<Jli>Witherell P., Herron J., and Ameta G., 2016, “Towards Annotations and Product Definitions for Additive Manufacturing”, Procedia CIRP 43, 339-344.</Jli>
+<Jli>Huang H. and Ameta G., 2016, "An XML Based Machining Energy Estimation Tool From Process Plans", International Journal of Computer Integrated Manufacturing, Vol 29, Issue 1, pp 107-118. </Jli>
+
 
 
 <h4>2015</h4>
           <p><b><i>Journal</i></b></p>
-		  <ol reversed class="J" start="20">
-			<li class="Jli">Ameta G., Lipman R., Moylan S. and Witherell P., <A href="http://mechanicaldesign.asmedigitalcollection.asme.org/article.aspx?articleid=2468633">"Investigating the Role of Geometric Dimensioning and Tolerancing in Additive Manufacturing"</a>, Journal of Mechanical Design, Vol 137, Issue 11. </li>
-			<li class="Jli">Hu Y., Srinivasan R., Spoll J., and Ameta G., <A href = "http://computingengineering.asmedigitalcollection.asme.org/article.aspx?articleid=2111018">"Graph Based Method and Tool for Complete and Selective Disassembly Time Estimation in Early Design"</a>, Journal of Computers and Information Science in Engineering, Vol 15(3), September 2015, 10pp.</li>
-			<li class="Jli">Huang H. and Ameta G., <A href="http://www.tandfonline.com/doi/abs/10.1080/0951192X.2014.1003147?journalCode=tcim20">"An XML Based Machining Energy Estimation Tool From Process Plans"</a>, International Journal of Computer Integrated Manufacturing, Article accepted December 2014.
-			</li>
-		  </ol>
+
+			<Jli class="Jli">Ameta G., Lipman R., Moylan S. and Witherell P., <A href="http://mechanicaldesign.asmedigitalcollection.asme.org/article.aspx?articleid=2468633">"Investigating the Role of Geometric Dimensioning and Tolerancing in Additive Manufacturing"</a>, Journal of Mechanical Design, Vol 137, Issue 11. </Jli>
+			<Jli class="Jli">Hu Y., Srinivasan R., Spoll J., and Ameta G., <A href = "http://computingengineering.asmedigitalcollection.asme.org/article.aspx?articleid=2111018">"Graph Based Method and Tool for Complete and Selective Disassembly Time Estimation in Early Design"</a>, Journal of Computers and Information Science in Engineering, Vol 15(3), September 2015, 10pp.</Jli>
+			<Jli class="Jli">Huang H. and Ameta G., <A href="http://www.tandfonline.com/doi/abs/10.1080/0951192X.2014.1003147?journalCode=tcim20">"An XML Based Machining Energy Estimation Tool From Process Plans"</a>, International Journal of Computer Integrated Manufacturing, Article accepted December 2014.
+			</Jli>
+
           <p><b><i>Book Chapters</i></b></p>
           <p>Ameta G., "Design issues in Additive Manufacturing", in press for Additive Manufacturing (eds Bandhypadhyay A. and Bose S.), CRC press.</p>
           <p><b><i>Conference Papers</i></b></p>
