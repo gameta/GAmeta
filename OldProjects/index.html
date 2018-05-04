@@ -190,26 +190,26 @@ body {font-family: Arial;}
   <table style="border-left: 1px solid #ccc;"  cellpadding="20"><tr><td>
   	<h3> Bezier Simplex</h3>
   			<p>CAGD Projects: Bezier Hyper-Tetrahedrons (4D): The concept of Bezier Tetrahedrons is an extension of bezier triangles. It basically uses barycentric coordinates to compute points. Here we are using 4D input to interpolate a Bezier 4D tetrahedron (simplex). Linear and Least square approximation will be used. Three of the parameters are x,y, z coordinates. The fourth parameter is the temperature distribution in the space. The input is shown in the first figure. The size of the sphere represents the magnitude of the temperature at that location. The input space is kept tetrahedral to make matter complicate. The linear and least squares out is shown in the following figures. Surprisingly, the least squares generates negative temperatures (spheres of different color) for some of the points.<p>
-  			<img src="tetrahedron.jpg" width="300">
-			<img src="tetrahedron1.jpg" width="300">
-			<img src="tetrahedron2.jpg" width="600">
+  			<img src="Tetrahedron.jpg" width="300">
+			<img src="Tetrahedron1.jpg" width="300">
+			<img src="Tetrahedron2.jpg" width="600">
 			<hr>
 	<h3> Hodograph</h3>
 			<p>CAGD Projects: Hodograph: Hodographs are polar velocity diagrams represented by a series of basis vectors. These can be used to develop bezier curve, if each basis vector is part of control polygon when attached end to end. The degree of the bezier curve is represented by the number of input basis vectors.</p>
 			<p>Hodographs are used in tool path generation and plotting wind velocity. While plotting wind velocities, the velocity vectors become the basis vector for a hodograph.</p>
-			<img src="hodograph1.jpg" width="300">
-			<img src="hodograph2.jpg" width="300">
+			<img src="Hodograph1.jpg" width="300">
+			<img src="Hodograph2.jpg" width="300">
 			<p>Since hodographs are represented by velocity vector, the velocity vector might change in direction or magnitude or both. The first figure shown when only the direction is changed, while the second and third include change in direction and magnitude.</p>
 			<p>The Premise to this project was from a paper that says "if a vector is transformed succesively using transforms such as scale, rotate, translate (but not reflect), then the resultant bezier curve will be atleast C2 continuous".</p>
-			<img src="hodograph3.jpg" width="600">
+			<img src="Hodograph3.jpg" width="600">
 			<hr>
 	<h3> Blossoms</h3>
 			<p>CAGD Projects: Blossoms: Given any control polygon, a new function is defined with number of parameters same as the degree of the curve. The points on the bezier curve can be evaluated when all the parameters are same and within the range 0-1. The range of all curves represented by this new function are called blossoms of the bezier curve. For a quadratic curve (degree two), the a blossom surface (two parameter) can be formed representing all the blossoms. For a cubic curve (degree three), a blossom volume can be formed representing all the blossom for the bezier curve.</p>
-			<img src="blossom2.jpg" width="600">
+			<img src="Blossom2.jpg" width="600">
 
 			<p>Blossoms are used in fast subdivision of a bezier curve while using DeCasteljau algorithm. Blossoms have also been used in Graph Matching algorithms as blossoms are subset of the original Graph(Bezier Curve in CAGD).</p>
-			<img src="blossom3.jpg" width="300">
-			<img src="blossom1.jpg" width="300">
+			<img src="Blossom3.jpg" width="300">
+			<img src="Blossom1.jpg" width="300">
 			<hr>
 	<h3>Coons Patches and Reflection Lines</h3>
 			  <p>CAGD Projects: Coons Patches and Reflection Lines: A coons patch tries to approximate the shape of the surface based on just the boundry curves (u=0, u=1, v=0 and v=1). The basic idea is to generate the points of the control polygon from the boundry control polygon. This requires a measure of goodness of the shape of the surface. While the standard Coon's algorithm is efficient various other algorithms are also proposed in the literature based on the permanence and modified permanence. An implementation of these algorithms was accomplished. Few examples are shown. The second part of the project involved generating reflection lines. The boundry curves for a mercedes fender was provided with the location of the lights and view direction. The resultant reflection lines on the surface were rendered in a post script file.</p>
