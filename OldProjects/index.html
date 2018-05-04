@@ -2,20 +2,58 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
-* {box-sizing: border-box}
-body {font-family: "Lato", sans-serif;}
+body {font-family: Arial;}
+
 /* Style the tab */
 .tab {
-    float: left;
+    overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-    width: 25%;
-    height: 300px;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    //padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+/* Style the tab */
+.vtab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 30%;
+    //min-height: 300px;
+    //position: relative;
+}
+
+/* Style the buttons inside the tab */
+.vtab button {
     display: block;
     background-color: inherit;
     color: black;
@@ -30,103 +68,214 @@ body {font-family: "Lato", sans-serif;}
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+.vtab button:hover {
     background-color: #ddd;
 }
 
 /* Create an active/current "tab button" class */
-.tab button.active {
+.vtab button.active {
     background-color: #ccc;
 }
 
 /* Style the tab content */
-.tabcontent {
-    float: left;
-    padding: 0px 12px;
+.vtabcontent {
+    //float: left;
+    //padding: 0px 12px;
     border: 1px solid #ccc;
-    width: 70%;
+    width: 100%;
     //border-left: none;
-
+    //min-height: 300px;
+    //position: relative;
+    //top: 0;
+	align-content: right;
 }
-
 </style>
 </head>
 <body>
+
+<p>Click on the buttons inside the tabbed menu:</p>
 <div id="wrapper" class="box" style="width:1000px; margin:0 auto;">
-	<center> <h1>Projects done between 2001 and 2007</h1></center>
-	<div class="tab">
-	<p><b>Research Projects</b></p>
-	  <button class="tablinks" onclick="openCity(event, 'Tolerancing 2002-2004')">Tolerancing 2002-2004</button>
-	  <button class="tablinks" onclick="openCity(event, 'Programming 2005-2007')">Programming 2005-2007</button>
-	<p><b>Course Projects</b></p>
-	  <button class="tablinks" onclick="openCity(event, 'Design 2002')">Design 2002</button>
-	  <button class="tablinks" onclick="openCity(event, 'Programming')" id="defaultOpen">Programming</button>
-	</div>
-
-	<div id="Tolerancing 2002-2004" class="tabcontent">
-			<h2>Black and Dekker Swing Arm Saw</h2>
-			<h2>Angular Features</h2>
-			<h2>Cluster of Features</h2>
-			<h2>Multi-constraint block</h2>
-	</div>
-
-	<div id="Programming 2005-2007" class="tabcontent">
-	  <h2>OpenGL T-Maps Creation</h2>
-			<h2>T-Maps convolution</h2>
-			<h2>T-Maps intersection computation</h2>
-	</div>
-
-	<div id="Design 2002" class="tabcontent">
-			<h2>Leonardo Vinci Mechanism</h2>
-			<h2>	Futuristic Car Surface Design</h2>
-			<h2>	Tolerance Analysis Comparison</h2>
-			<h2>	Chip Substrate Plate Design Report</h2>
-			<h2>	TRIZ for Conceptual Design</h2>
-	</div>
-
-	<div id="Programming" class="tabcontent">
-		 <h2>CAD 2002-2003</h2>
-		  <h3>ACIS Based CSG CAD with Volume Surface and Center Extraction</h3>
-		  <h3>ACIS Edge and Surface Picking for Feature Parameter Extraction</h3>
-		  <h2>Computational Geometry 2003</h2>
-		  <h3>Bezier Curves</h3>
-		  <p>CAGD Projects: Bezier Curves: To create a bezier curve, input in the form of control polygon is required. Mouse clicks on the screen adds the consecutive control points. The a degree of the curve is specified. Although degree and number of control points are linked but we might want two bezier curve from 9 CP of degree 4 (each with 5 CP and one common point for C0 continuity). Bezier curves are constructed using the DeCasteljau algorithm. Its easier to debug and visualize if the results at each step are correct. The resultant curve is also shown.</p>
-			<img src="untitled1.jpg" width="600">
-		  <p>The next figure shows multiple curves. Curve editing, by moving control point (see next figure), or by deleting a whole curve is also implemented. Curves can be translated or rotated. The purpose of the editing tool is create a meaningful shape by combining several curves. A conceptual shape of the car is created as the final task for the project.</p>
-			<img src="untitled3.jpg" width="300"><img src="untitled4.jpg" width="300">
-		  <p>Once a desirable shape is created, it can be store as a PostScript file. (Viewable with GSviewer). The control points can also be saved as separate text file so as to open and edit later using the same program.</p>
-		  	<img src="untitled6.jpg" width="600">
-		  <h3>Delaunay Triangulation and Voronoi</h3>
-		  <p>Delaunay Triangulation of a simple point data. Point data can be added as x, y values or by click on the screen. A list of x, y values can be read from a text file also. The triangulation is built by adding each point one at a time. A virtual triangle of large proportions is added first so that any point added lies atleast within the virtual triangle. The virtual triangle or any edges connecting to the vertices of the virtual triangle are not displayed.
-		  </p>
-		  <img src="Delaunay.jpg" width="600">
-
-		  <p>Convex hull of the point data.
-		  Each triangle's edge is queried for its neighbor having a vertex as the vertex of the virtual triangle. The edge across which such neighbor exists is the edge belonging to the convex hull.
-		  </p>
-		  <img src="Convex Hull.jpg" width="600">
-
-
-
-		  <p>A helpful tool to identify the neighbor of each triangle. This is helpful when debugging the code.</p>
-		   <img src="Query Triangle.jpg" width="600">
-
-		  <p>Voronoi diagram of the triangulation. Voronoi diagrams are the dual to the delaunay triangulation. Voronoi diagram can be obtained by connecting the circumcenter (center of the circumcircle) of each triangle to its neighbor's circumcenter. Voronoi diagrams have various uses in path planning but is also used in identifying the location of a mobile phone. Each polygon in the voronoi diagram represents the range served by each mobile tower. The location of the tower is the small circle (see fig.) in the voronoi polygon (vertex of delaunay triangulation).</p>
-		  <img src="Voronoi.jpg" width="600">
-
-		  <p>The adjacent figure shows an application of triangulation to create a triangular mesh, to be used in Finite Element Analysis. The respective Voronoi diagram is also displayed.</p>
-		  <img src="Voronoi and Delaunay(Mesh).jpg" width="600">
-		  </p>
-		  <h2>		Computer Graphics 2005</h2>
-		  <h2>		Finite Element Analysis 2004</h2>
-		  <h2>		Others 2002-2004</h2>
-					<h3>Shortest Path Algorithm (Travelling Salesman)</h3>
-					<h3>Line Follower and Constant Velocity Single Cylinder IC Engine Car</h3>
-					<h3>B+ trees</h3>
-	</div>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Research Tolerance')" >Research Tolerance</button>
+  <button class="tablinks" onclick="openCity(event, 'Research Coding')" >Research Coding</button>
+  <button class="tablinks" onclick="openCity(event, 'Design Projects')">Design Projects</button>
+  <button class="tablinks" onclick="openCity(event, 'Coding Projects')" id="defaultOpen">Coding Projects</button>
 </div>
 
+<div id="Research Tolerance" class="tabcontent">
+<div class="vtab">
+  <button class="vtablinks" onclick="vopenCity(event, 'LondonvLondon')" id="v1defaultOpen">LondonvLondon</button>
+  <button class="vtablinks" onclick="vopenCity(event, 'LondonvParis')">LondonvParis</button>
+  <button class="vtablinks" onclick="vopenCity(event, 'LondonvTokyo')">LondonvTokyo</button>
+</div>
+
+<div id="LondonvLondon" class="vtabcontent">
+  <h3>LondonvLondon</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="LondonvParis" class="vtabcontent">
+  <h3>LondonvParis</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="LondonvTokyo" class="vtabcontent">
+  <h3>LondonvTokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+</div>
+
+<div id="Research Coding" class="tabcontent">
+<div class="vtab">
+  <button class="vtablinks" onclick="vopenCity(event, 'ParisvLondon')" id="v2defaultOpen">ParisvLondon</button>
+  <button class="vtablinks" onclick="vopenCity(event, 'ParisvParis')">ParisvParis</button>
+  <button class="vtablinks" onclick="vopenCity(event, 'ParisvTokyo')">ParisvTokyo</button>
+</div>
+
+<div id="ParisvLondon" class="vtabcontent">
+  <h3>ParisvLondon</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="ParisvParis" class="vtabcontent">
+  <h3>ParisvParis</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="ParisvTokyo" class="vtabcontent">
+  <h3>ParisvTokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+</div>
+
+<div id="Design Projects" class="tabcontent">
+  <div class="vtab">
+    <button class="vtablinks" onclick="vopenCity(event, 'TokyovLondon')" id="v3defaultOpen">TokyovLondon</button>
+    <button class="vtablinks" onclick="vopenCity(event, 'TokyovParis')">TokyovParis</button>
+    <button class="vtablinks" onclick="vopenCity(event, 'TokyovTokyo')">TokyovTokyo</button>
+  </div>
+
+  <div id="TokyovLondon" class="vtabcontent">
+    <h3>TokyovLondon</h3>
+    <p>Tokyo is the capital city of England.</p>
+  </div>
+
+  <div id="TokyovParis" class="vtabcontent">
+    <h3>TokyovParis</h3>
+    <p>Tokyo is the capital of France.</p>
+  </div>
+
+  <div id="TokyovTokyo" class="vtabcontent">
+    <h3>TokyovTokyo</h3>
+    <p>Tokyo is the capital of Japan.</p>
+</div>
+</div>
+
+<div id="Coding Projects" class="tabcontent">
+  <div class="vtab">
+    <button class="vtablinks" onclick="vopenCity(event, 'CAD 2002-2003')" >CAD 2002-2003</button>
+    <button class="vtablinks" onclick="vopenCity(event, 'Computational Geometry 2003')" id="v4defaultOpen">Computational Geometry 2003</button>
+    <button class="vtablinks" onclick="vopenCity(event, 'Computer Graphics 2005')">Computer Graphics 2005</button>
+    <button class="vtablinks" onclick="vopenCity(event, 'Finite Element Analysis 2004')">Finite Element Analysis 2004</button>
+    <button class="vtablinks" onclick="vopenCity(event, 'Others')">Others</button>
+
+  </div>
+
+  <div id="CAD 2002-2003" class="vtabcontent">
+    <h3>TokyovLondon</h3>
+    <p>Tokyo is the capital city of England.</p>
+  </div>
+
+  <div id="Computational Geometry 2003" class="vtabcontent">
+  <table style="border-left: 1px solid #ccc;"  cellpadding="20"><tr><td>
+  	<h3> Bezier Simplex</h3>
+  			<p>CAGD Projects: Bezier Hyper-Tetrahedrons (4D): The concept of Bezier Tetrahedrons is an extension of bezier triangles. It basically uses barycentric coordinates to compute points. Here we are using 4D input to interpolate a Bezier 4D tetrahedron (simplex). Linear and Least square approximation will be used. Three of the parameters are x,y, z coordinates. The fourth parameter is the temperature distribution in the space. The input is shown in the first figure. The size of the sphere represents the magnitude of the temperature at that location. The input space is kept tetrahedral to make matter complicate. The linear and least squares out is shown in the following figures. Surprisingly, the least squares generates negative temperatures (spheres of different color) for some of the points.<p>
+  			<img src="tetrahedron.jpg" width="300">
+			<img src="tetrahedron1.jpg" width="300">
+			<img src="tetrahedron2.jpg" width="600">
+			<hr>
+	<h3> Hodograph</h3>
+			<p>CAGD Projects: Hodograph: Hodographs are polar velocity diagrams represented by a series of basis vectors. These can be used to develop bezier curve, if each basis vector is part of control polygon when attached end to end. The degree of the bezier curve is represented by the number of input basis vectors.</p>
+			<p>Hodographs are used in tool path generation and plotting wind velocity. While plotting wind velocities, the velocity vectors become the basis vector for a hodograph.</p>
+			<img src="hodograph1.jpg" width="300">
+			<img src="hodograph2.jpg" width="300">
+			<p>Since hodographs are represented by velocity vector, the velocity vector might change in direction or magnitude or both. The first figure shown when only the direction is changed, while the second and third include change in direction and magnitude.</p>
+			<p>The Premise to this project was from a paper that says "if a vector is transformed succesively using transforms such as scale, rotate, translate (but not reflect), then the resultant bezier curve will be atleast C2 continuous".</p>
+			<img src="hodograph3.jpg" width="600">
+			<hr>
+	<h3> Blossoms</h3>
+			<p>CAGD Projects: Blossoms: Given any control polygon, a new function is defined with number of parameters same as the degree of the curve. The points on the bezier curve can be evaluated when all the parameters are same and within the range 0-1. The range of all curves represented by this new function are called blossoms of the bezier curve. For a quadratic curve (degree two), the a blossom surface (two parameter) can be formed representing all the blossoms. For a cubic curve (degree three), a blossom volume can be formed representing all the blossom for the bezier curve.</p>
+			<img src="blossom2.jpg" width="600">
+
+			<p>Blossoms are used in fast subdivision of a bezier curve while using DeCasteljau algorithm. Blossoms have also been used in Graph Matching algorithms as blossoms are subset of the original Graph(Bezier Curve in CAGD).</p>
+			<img src="blossom3.jpg" width="300">
+			<img src="blossom1.jpg" width="300">
+			<hr>
+	<h3>Coons Patches and Reflection Lines</h3>
+			  <p>CAGD Projects: Coons Patches and Reflection Lines: A coons patch tries to approximate the shape of the surface based on just the boundry curves (u=0, u=1, v=0 and v=1). The basic idea is to generate the points of the control polygon from the boundry control polygon. This requires a measure of goodness of the shape of the surface. While the standard Coon's algorithm is efficient various other algorithms are also proposed in the literature based on the permanence and modified permanence. An implementation of these algorithms was accomplished. Few examples are shown. The second part of the project involved generating reflection lines. The boundry curves for a mercedes fender was provided with the location of the lights and view direction. The resultant reflection lines on the surface were rendered in a post script file.</p>
+			  <img src="untitled13.jpg" width="300">
+			  <img src="untitled14.jpg" width="300"><br>
+			  <img src="untitled15.jpg" width="300">
+			  <img src="reflection lines.jpg" width="300">
+			  <hr>
+	<h3>Bezier Surfaces</h3>
+			  <p>CAGD Projects: Bezier Surfaces: Input is the control polygon for the surface. The points can be read from a file or provided in the textbox on the status bar. The surface is computed using the Decasteljau algorithm. An example of a saddle surface is shown. The control polygon when looking along the z-axis looks square.</p>
+			  <img src="untitled8.jpg" width="300">
+			  <img src="untitled10.jpg" width="300">
+			  <p>Surface can be viewed with u-isoline, v-isoline or both. The surface can be edited by changing the control points. The control point can be translated along any vector. The surface will then be recomputed based on the new set of control polygon. Modified saddle is also shown in the next figure. Another example of mobius strip is shown.</p>
+				<img src="untitled11.jpg" width="300">
+			  <img src="untitled12.jpg" width="300">
+			<hr>
+    <h3>Bezier Curves</h3>
+			  <p>CAGD Projects: Bezier Curves: To create a bezier curve, input in the form of control polygon is required. Mouse clicks on the screen adds the consecutive control points. The a degree of the curve is specified. Although degree and number of control points are linked but we might want two bezier curve from 9 CP of degree 4 (each with 5 CP and one common point for C0 continuity). Bezier curves are constructed using the DeCasteljau algorithm. Its easier to debug and visualize if the results at each step are correct. The resultant curve is also shown.</p>
+				<img src="untitled1.jpg" width="600">
+			  <p>The next figure shows multiple curves. Curve editing, by moving control point (see next figure), or by deleting a whole curve is also implemented. Curves can be translated or rotated. The purpose of the editing tool is create a meaningful shape by combining several curves. A conceptual shape of the car is created as the final task for the project.</p>
+				<img src="untitled3.jpg" width="300"><img src="untitled4.jpg" width="300">
+			  <p>Once a desirable shape is created, it can be store as a PostScript file. (Viewable with GSviewer). The control points can also be saved as separate text file so as to open and edit later using the same program.</p>
+			  	<img src="untitled6.jpg" width="600">
+			  	<hr>
+	<h3>Delaunay Triangulation and Voronoi</h3>
+			  <p>Delaunay Triangulation of a simple point data. Point data can be added as x, y values or by click on the screen. A list of x, y values can be read from a text file also. The triangulation is built by adding each point one at a time. A virtual triangle of large proportions is added first so that any point added lies atleast within the virtual triangle. The virtual triangle or any edges connecting to the vertices of the virtual triangle are not displayed.
+			  </p>
+			  <img src="Delaunay.jpg" width="600">
+
+			  <p>Convex hull of the point data.
+			  Each triangle's edge is queried for its neighbor having a vertex as the vertex of the virtual triangle. The edge across which such neighbor exists is the edge belonging to the convex hull.
+			  </p>
+			  <img src="Convex Hull.jpg" width="600">
+
+
+
+			  <p>A helpful tool to identify the neighbor of each triangle. This is helpful when debugging the code.</p>
+			   <img src="Query Triangle.jpg" width="600">
+
+			  <p>Voronoi diagram of the triangulation. Voronoi diagrams are the dual to the delaunay triangulation. Voronoi diagram can be obtained by connecting the circumcenter (center of the circumcircle) of each triangle to its neighbor's circumcenter. Voronoi diagrams have various uses in path planning but is also used in identifying the location of a mobile phone. Each polygon in the voronoi diagram represents the range served by each mobile tower. The location of the tower is the small circle (see fig.) in the voronoi polygon (vertex of delaunay triangulation).</p>
+			  <img src="Voronoi.jpg" width="600">
+
+			  <p>The adjacent figure shows an application of triangulation to create a triangular mesh, to be used in Finite Element Analysis. The respective Voronoi diagram is also displayed.</p>
+			  <img src="Voronoi and Delaunay(Mesh).jpg" width="600">
+		  </p></td></tr></table>
+  </div>
+
+  <div id="Computer Graphics 2005" class="vtabcontent">
+    <h3>TokyovTokyo</h3>
+    <p>Tokyo is the capital of Japan.</p>
+</div>
+<div id="Finite Element Analysis 2004" class="vtabcontent">
+    <h3>TokyovTokyo</h3>
+    <p>Tokyo is the capital of Japan.</p>
+</div>
+<div id="Others" class="vtabcontent">
+    <h3>TokyovTokyo</h3>
+    <p>Tokyo is the capital of Japan.</p>
+</div>
+</div>
+
+
+</div>
 <script>
+var htablist=["Research Tolerance","Research Coding","Design Projects","Coding Projects"];
+var vtabdefault=["v1defaultOpen","v2defaultOpen","v3defaultOpen","v4defaultOpen"];
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -136,13 +285,36 @@ function openCity(evt, cityName) {
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
+
     }
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
+    document.getElementById(vtabdefault[htablist.indexOf(cityName)]).click();
+    //document.getElementById("v1defaultOpen").click();
+
 }
 
-// Get the element with id="defaultOpen" and click on it
+function vopenCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("vtabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("vtablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+
+}
 document.getElementById("defaultOpen").click();
+//document.getElementById("v1defaultOpen").click();
+//document.getElementById("v2defaultOpen").click();
+
+
+$(".vtab").css("height",$( ".vtabcontent" ).height());
+
 </script>
 
 </body>
