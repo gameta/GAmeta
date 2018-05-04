@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta name="keywords"
+  content="Gaurav, Ameta, GD&T, Design, Sustainability" />
+  <title>Gaurav Ameta</title>
+  <style>
+.page h1.format-icon:before {
+content: none;
+}
+    /* Style the tab */
+    div.tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+    }
+
+    /* Style the buttons inside the tab */
+    div.tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+    }
+
+    /* Change background color of buttons on hover */
+    div.tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    div.tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+	}
+	/* Fade in tabs */
+	@-webkit-keyframes fadeEffect {
+	    from {opacity: 0;}
+	    to {opacity: 1;}
+	}
+
+	@keyframes fadeEffect {
+	    from {opacity: 0;}
+	    to {opacity: 1;}
+	}
+
+.indented {   padding-left: 50pt;   padding-right: 50pt; }
+</style>
+
+</head>
+
+<body>
+
+<div id="wrapper" style="width:800px; margin:0 auto;">
+
+
+<div id="main">
+
+
+<div class="tab">
+	<button class="tablinks" onclick="openCity(event, 'Paper Citations')" id="defaultOpen">Paper Citations</button>
+	<!--
+  /*<button class="tablinks" onclick="openCity(event, 'Research Projects')">Research Projects</button>*/
+  -->
+  <button class="tablinks" onclick="openCity(event, 'Term Similarity')">Term Similarity</button>
+  <button class="tablinks" onclick="openCity(event, 'Tolerance Research')">Tolerance Research</button>
+
+</div>
+
+
+<div id="Paper Citations" class="tabcontent">
+<h4>Citation Co-author Network</h4><br>
+(All from Google Scholar, Python and D3 visualization library)
+<script async src="//jsfiddle.net/gauravameta/ok2d77bk/embed/result/"></script><br>
+<h4>Paper Citation Network</h4><br>
+Red circles are Gaurav's paper, blue are paper citing Gaurav's paper; Size of circle represents citation numbers; Only papers with a minimum citation limit are showing their first author and year
+<script async src="//jsfiddle.net/gauravameta/jyhymthm/embed/result/"></script><br>
+Arranged according to publication year <br>
+<script async src="//jsfiddle.net/gauravameta/fs3x7ogt/embed/result/"></script>
+
+
+<hr><br>
+</div>
+<div id="Term Similarity" class="tabcontent">
+</div>
+<div id="Tolerance Research" class="tabcontent">
+<h4>Tolerance Research Network</h4><br>
+<img src="AuthorcitationNetwork.png" width=700><br>
+<img src="OrganizationBibliographicNetwork.png" width=700><br>
+<hr><br>
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+<script type="text/javascript" language="javascript">
+function openCity(evt, cityName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+}
+ document.getElementById("defaultOpen").click();</script>
+<!--End of the WSU Global Footer Zone. -->
+<!--The code below is for the print tool in the toolbar-->
+
+</body>
+</html>
