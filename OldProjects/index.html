@@ -182,19 +182,53 @@ body {font-family: Arial;}
   </div>
 
   <div id="CAD 2002-2003" class="vtabcontent">
-    <h3>TokyovLondon</h3>
-    <p>Tokyo is the capital city of England.</p>
+    <table style="border-left: 1px solid #ccc;"  cellpadding="20"><tr><td>
+	    <h3>TokyovTokyo</h3>
+	    <p>Tokyo is the capital of Japan.</p>
+    </td></tr></table>
   </div>
 
   <div id="Computational Geometry 2003" class="vtabcontent">
   <table style="border-left: 1px solid #ccc;"  cellpadding="20"><tr><td>
-  	<h3> Bezier Simplex</h3>
+  <a href="#BezierPatches">Bezier Patches</a>
+  <a href="#SibsonsInterpolant">Sibson's Interpolant</a>
+  <a href="#BezierSimplex">Bezier Simplex</a>
+  <a href="#Hodograph">Hodograph</a>
+  <a href="#Blossoms">Blossoms</a>
+  <a href="#CoonsPatches">Coons Patches</a>
+  <a href="#BezierSurface">Bezier Surface</a>
+  <a href="#BezierCurves">Bezier Curves</a>
+  <a href="#Delaunay">Delaunay</a>
+
+  </tr></td><tr><td>
+  <p>All these projects were completed as part of two courses taught by Prof. Gerald Farin at ASU.</p>
+  </tr></td><tr><td>
+  	<h3 id="BezierPatches"> Bezier Patches</h3>
+			<p>CG Projects: Bezier Patches:
+			In this project the input was 32 patch bezier control points. The output was to be generated using OpenGL based program to visualize the resultant surface. Flat and smooth shaded objects were displayed by computing face normals and vertex normals.</p>
+			<img src="Project 1-1.jpg" width="600">
+			<p>A shaded and wireframe utah tea pot is shown. An addition option was created so that each individual patch and patch boundary for other patches can be visualized with the patch normals. This output is also shown.</p>
+			<img src="Project 1-2.jpg" width="300">
+			<img src="Project 1-3.jpg" width="300">
+    <h3 id="SibsonsInterpolant"> Sibson's Interpolant</h3>
+			<p>CAGD Projects: Sibson's Interpolant:
+			Sibson's Interpolant is mainly used in multivariate data interpolation. Here we have used it to model a terrain, where x,y,z data of some location is available. The idea is to basically triangulate the input points in the x,y plane. </p>
+			<p>Then generate the voronoi diagram. The next step is to simulate an insertion of point. Due to the insertion of this point P, the neighboring area of the voronoi polygons is effected.</p>
+			<img src="Sibson's1.jpg" width="300">
+					<img src="Sibson's2.jpg" width="300">
+
+			<p>Therefore, barycentric combination of these affected area and their z coordinates are used to generate the z value for the new insertion point. i.e. Pz = Sum(Zi*AREAi(reduced)/Parea, i = 0...n). Note that the point is not actually inserted but only simulated. Therefore, the original voronoi polygons remain unchanged. </p>
+
+			<p>Similarly, points are simulated for the whole domain. Few examples with the interpolated terrain and triangulation are shown. The above scheme describes the linear interpolant. A C1 interpolant is supposed to be better. Please refer http://dilbert.engr.ucdavis.edu/~suku/nem/ for further applications.</p>
+			<img src="Sibson's3.jpg" width="300">
+			<img src="Sibson's2.jpg" width="300">
+  	<h3 id="BezierSimplex"> Bezier Simplex</h3>
   			<p>CAGD Projects: Bezier Hyper-Tetrahedrons (4D): The concept of Bezier Tetrahedrons is an extension of bezier triangles. It basically uses barycentric coordinates to compute points. Here we are using 4D input to interpolate a Bezier 4D tetrahedron (simplex). Linear and Least square approximation will be used. Three of the parameters are x,y, z coordinates. The fourth parameter is the temperature distribution in the space. The input is shown in the first figure. The size of the sphere represents the magnitude of the temperature at that location. The input space is kept tetrahedral to make matter complicate. The linear and least squares out is shown in the following figures. Surprisingly, the least squares generates negative temperatures (spheres of different color) for some of the points.<p>
   			<img src="Tetrahedron.jpg" width="300">
 			<img src="Tetrahedron1.jpg" width="300">
 			<img src="Tetrahedron2.jpg" width="600">
 			<hr>
-	<h3> Hodograph</h3>
+	<h3 id="Hodograph"> Hodograph</h3>
 			<p>CAGD Projects: Hodograph: Hodographs are polar velocity diagrams represented by a series of basis vectors. These can be used to develop bezier curve, if each basis vector is part of control polygon when attached end to end. The degree of the bezier curve is represented by the number of input basis vectors.</p>
 			<p>Hodographs are used in tool path generation and plotting wind velocity. While plotting wind velocities, the velocity vectors become the basis vector for a hodograph.</p>
 			<img src="Hodograph1.jpg" width="300">
@@ -203,7 +237,7 @@ body {font-family: Arial;}
 			<p>The Premise to this project was from a paper that says "if a vector is transformed succesively using transforms such as scale, rotate, translate (but not reflect), then the resultant bezier curve will be atleast C2 continuous".</p>
 			<img src="Hodograph3.jpg" width="600">
 			<hr>
-	<h3> Blossoms</h3>
+	<h3 id="Blossoms"> Blossoms</h3>
 			<p>CAGD Projects: Blossoms: Given any control polygon, a new function is defined with number of parameters same as the degree of the curve. The points on the bezier curve can be evaluated when all the parameters are same and within the range 0-1. The range of all curves represented by this new function are called blossoms of the bezier curve. For a quadratic curve (degree two), the a blossom surface (two parameter) can be formed representing all the blossoms. For a cubic curve (degree three), a blossom volume can be formed representing all the blossom for the bezier curve.</p>
 			<img src="Blossom2.jpg" width="600">
 
@@ -211,14 +245,14 @@ body {font-family: Arial;}
 			<img src="Blossom3.jpg" width="300">
 			<img src="Blossom1.jpg" width="300">
 			<hr>
-	<h3>Coons Patches and Reflection Lines</h3>
+	<h3 id="CoonsPatches">Coons Patches and Reflection Lines</h3>
 			  <p>CAGD Projects: Coons Patches and Reflection Lines: A coons patch tries to approximate the shape of the surface based on just the boundry curves (u=0, u=1, v=0 and v=1). The basic idea is to generate the points of the control polygon from the boundry control polygon. This requires a measure of goodness of the shape of the surface. While the standard Coon's algorithm is efficient various other algorithms are also proposed in the literature based on the permanence and modified permanence. An implementation of these algorithms was accomplished. Few examples are shown. The second part of the project involved generating reflection lines. The boundry curves for a mercedes fender was provided with the location of the lights and view direction. The resultant reflection lines on the surface were rendered in a post script file.</p>
 			  <img src="untitled13.jpg" width="300">
 			  <img src="untitled14.jpg" width="300"><br>
 			  <img src="untitled15.jpg" width="300">
 			  <img src="reflection lines.jpg" width="300">
 			  <hr>
-	<h3>Bezier Surfaces</h3>
+	<h3 id="BezierSurfaces">Bezier Surfaces</h3>
 			  <p>CAGD Projects: Bezier Surfaces: Input is the control polygon for the surface. The points can be read from a file or provided in the textbox on the status bar. The surface is computed using the Decasteljau algorithm. An example of a saddle surface is shown. The control polygon when looking along the z-axis looks square.</p>
 			  <img src="untitled8.jpg" width="300">
 			  <img src="untitled10.jpg" width="300">
@@ -226,7 +260,7 @@ body {font-family: Arial;}
 				<img src="untitled11.jpg" width="300">
 			  <img src="untitled12.jpg" width="300">
 			<hr>
-    <h3>Bezier Curves</h3>
+    <h3 id="BezierCurves">Bezier Curves</h3>
 			  <p>CAGD Projects: Bezier Curves: To create a bezier curve, input in the form of control polygon is required. Mouse clicks on the screen adds the consecutive control points. The a degree of the curve is specified. Although degree and number of control points are linked but we might want two bezier curve from 9 CP of degree 4 (each with 5 CP and one common point for C0 continuity). Bezier curves are constructed using the DeCasteljau algorithm. Its easier to debug and visualize if the results at each step are correct. The resultant curve is also shown.</p>
 				<img src="untitled1.jpg" width="600">
 			  <p>The next figure shows multiple curves. Curve editing, by moving control point (see next figure), or by deleting a whole curve is also implemented. Curves can be translated or rotated. The purpose of the editing tool is create a meaningful shape by combining several curves. A conceptual shape of the car is created as the final task for the project.</p>
@@ -234,7 +268,7 @@ body {font-family: Arial;}
 			  <p>Once a desirable shape is created, it can be store as a PostScript file. (Viewable with GSviewer). The control points can also be saved as separate text file so as to open and edit later using the same program.</p>
 			  	<img src="untitled6.jpg" width="600">
 			  	<hr>
-	<h3>Delaunay Triangulation and Voronoi</h3>
+	<h3 id="Delaunay">Delaunay Triangulation and Voronoi</h3>
 			  <p>Delaunay Triangulation of a simple point data. Point data can be added as x, y values or by click on the screen. A list of x, y values can be read from a text file also. The triangulation is built by adding each point one at a time. A virtual triangle of large proportions is added first so that any point added lies atleast within the virtual triangle. The virtual triangle or any edges connecting to the vertices of the virtual triangle are not displayed.
 			  </p>
 			  <img src="Delaunay.jpg" width="600">
@@ -262,12 +296,29 @@ body {font-family: Arial;}
     <p>Tokyo is the capital of Japan.</p>
 </div>
 <div id="Finite Element Analysis 2004" class="vtabcontent">
-    <h3>TokyovTokyo</h3>
-    <p>Tokyo is the capital of Japan.</p>
+    <table style="border-left: 1px solid #ccc;"  cellpadding="20"><tr><td>
+    	<h3>FEA Developer Projects: 3D Trusses</h3>
+		<p>
+			This project was an extension of the 2D project. Various trusses were taken as example cases. Two of the example are shown here. One for a cantilever type truss. Other one is simply supported beam on one end. Actual output was through a formatted text file.</p>
+			<p>The program implemented can solve for Displacement loads, Forces, Temperature loads. The OpenGL output shows the original shape of the truss, the deformed shape and location of the constraints and the load.</p>
+			<img src="Truss 1.jpg" width="300">
+			<img src="Truss 2.jpg" width="300">
+
+		<hr>
+		<h3>FEA Developer Projects: 2D Q4 (4 Noded Quadrilateral) Elements</h3>
+			<p>FEA Developer Projects: 2D Q4 (4 Noded Quadrilateral) Elements: In this project we were supposed to create a Finite Element Program for solving 2D Plane Stress, Plane Strain problems using 4 Noded Quadrilateral. This included incorporating the shape functions used with 4 Noded Quadrilateral. Utilizing skyline scheme for modelling the problem in a matrix form. Then creating a solution using Gaussian Elimination. </p>
+			<img src="16els.jpg" width="300">
+			<img src="8els.jpg" width="300">
+			<p>The various classes developed were: CVector, GaussWeight, CMatrix, CNode, CElement, CMaterialGroup, CNodalResponse, CElemental Response and CFeat. CFeat is the main class containing all the structures. The flow of the program was: Read Problem Size, Echo Input, ConstructK, ConstructF, ImposeBC, Solve, ComputeResponse, Create Output. The results from analysis with two cantilever beams is shown graphically. Range of Gray color represents lower to higher stress. Temperature loads can also be incorporated.</p>
+
+
+    </td></tr></table>
 </div>
 <div id="Others" class="vtabcontent">
-    <h3>TokyovTokyo</h3>
-    <p>Tokyo is the capital of Japan.</p>
+    <table style="border-left: 1px solid #ccc;"  cellpadding="20"><tr><td>
+	    <h3>TokyovTokyo</h3>
+	    <p>Tokyo is the capital of Japan.</p>
+    </td></tr></table>
 </div>
 </div>
 
