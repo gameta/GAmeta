@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
-body {font-family: Arial;}
+
 
 /* Style the tab */
 .tab {
@@ -22,7 +22,7 @@ body {font-family: Arial;}
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
-    font-size: 17px;
+
 }
 
 /* Change background color of buttons on hover */
@@ -64,7 +64,7 @@ body {font-family: Arial;}
     text-align: left;
     cursor: pointer;
     transition: 0.3s;
-    font-size: 17px;
+
 }
 
 /* Change background color of buttons on hover */
@@ -180,13 +180,13 @@ body {font-family: Arial;}
 
 			<p>Similarly, points are simulated for the whole domain. Few examples with the interpolated terrain and triangulation are shown. The above scheme describes the linear interpolant. A C1 interpolant is supposed to be better. Please refer http://dilbert.engr.ucdavis.edu/~suku/nem/ for further applications.</p>
 			<img src="Sibson's3.jpg" width="300">
-			<img src="Sibson's2.jpg" width="300">
+			<img src="Sibson's4.jpg" width="300">
 			<hr>
   	<h3 id="BezierSimplex"> Bezier Simplex</h3>
   			<p>CAGD Projects: Bezier Hyper-Tetrahedrons (4D): The concept of Bezier Tetrahedrons is an extension of bezier triangles. It basically uses barycentric coordinates to compute points. Here we are using 4D input to interpolate a Bezier 4D tetrahedron (simplex). Linear and Least square approximation will be used. Three of the parameters are x,y, z coordinates. The fourth parameter is the temperature distribution in the space. The input is shown in the first figure. The size of the sphere represents the magnitude of the temperature at that location. The input space is kept tetrahedral to make matter complicate. The linear and least squares out is shown in the following figures. Surprisingly, the least squares generates negative temperatures (spheres of different color) for some of the points.<p>
   			<img src="Tetrahedron.jpg" width="300">
-			<img src="Tetrahedron1.jpg" width="300">
-			<img src="Tetrahedron2.jpg" width="600">
+			<img src="Tetrahedron2.jpg" width="300">
+			<img src="Tetrahedron1.jpg" width="600">
 			<hr>
 	<h3 id="Hodograph"> Hodograph</h3>
 			<p>CAGD Projects: Hodograph: Hodographs are polar velocity diagrams represented by a series of basis vectors. These can be used to develop bezier curve, if each basis vector is part of control polygon when attached end to end. The degree of the bezier curve is represented by the number of input basis vectors.</p>
