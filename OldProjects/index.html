@@ -147,10 +147,12 @@
   <div id="CAD 2002-2003" class="vtabcontent">
     <table style="border-left: 1px solid #ccc;"  cellpadding="20"><tr><td>
 	    <h3>ACIS Based CSG CAD with Volume Surface and Center Extraction</h3>
+	    <p>This project was part of CAD programming course taught by Prof. Mark Henderson in 2002. All the ACIS MFC functionality was implemented assuming a CSG type CAD system. Display of CSG history tree was also one of the highlight of this project.</p>
 	    <img src="untitled19.jpg" width="300">
 		<img src="untitled20.jpg" width="300">
 		<hr>
 		<h3>ACIS Edge and Surface Picking for Feature Parameter Extraction</h3>
+		<p>This project was part of Feature Parameter Extraction to support DFM testbed. Implementaion related to switching ACIS mode to edge and then selecting edges. If a circular edge is picked, option to use its radius/diameter or to select another edge to identify distance was provided. The extracted parameters were then associated with a feature based in User-defined library.</p>
     </td></tr></table>
   </div>
 
@@ -162,8 +164,8 @@
   <a href="#Hodograph">Hodograph</a> &nbsp; &nbsp;
   <a href="#Blossoms">Blossoms</a> &nbsp; &nbsp;<br>
   <a href="#CoonsPatches">Coons Patches</a> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-  <a href="#BezierSurface">Bezier Surface</a> &nbsp; &nbsp;
-  <a href="#BezierCurves">Bezier Curves</a> &nbsp;
+  <a href="#BezierSurface">Bezier Surface</a> &nbsp;
+  <a href="#BezierCurves">Bezier and BSpline Curves</a>
   <a href="#Delaunay">Delaunay</a> &nbsp; &nbsp;
 <hr>
   <p>All these projects were completed as part of two courses taught by Prof. Gerald Farin at ASU in 2002 and 2003. All programming was done in MFC, C++ and OpenGL.</p>
@@ -220,13 +222,15 @@
 				<img src="untitled11.jpg" width="300">
 			  <img src="untitled12.jpg" width="300">
 			<hr>
-    <h3 id="BezierCurves">Bezier Curves</h3>
+    <h3 id="BezierCurves">Bezier and BSpline Curves</h3>
 			  <p>CAGD Projects: Bezier Curves: To create a bezier curve, input in the form of control polygon is required. Mouse clicks on the screen adds the consecutive control points. The a degree of the curve is specified. Although degree and number of control points are linked but we might want two bezier curve from 9 CP of degree 4 (each with 5 CP and one common point for C0 continuity). Bezier curves are constructed using the DeCasteljau algorithm. Its easier to debug and visualize if the results at each step are correct. The resultant curve is also shown.</p>
 				<img src="untitled1.jpg" width="600">
 			  <p>The next figure shows multiple curves. Curve editing, by moving control point (see next figure), or by deleting a whole curve is also implemented. Curves can be translated or rotated. The purpose of the editing tool is create a meaningful shape by combining several curves. A conceptual shape of the car is created as the final task for the project.</p>
 				<img src="untitled3.jpg" width="300"><img src="untitled4.jpg" width="300">
 			  <p>Once a desirable shape is created, it can be store as a PostScript file. (Viewable with GSviewer). The control points can also be saved as separate text file so as to open and edit later using the same program.</p>
 			  	<img src="untitled6.jpg" width="600">
+			  <p>BSpline curves were either clamped of unclamped and had option to modify control points and insert knots as shown in the animation below.</p>
+			  	<img src="BSpline2.gif" width="600">
 			  	<hr>
 	<h3 id="Delaunay">Delaunay Triangulation and Voronoi</h3>
 			  <p>Delaunay Triangulation of a simple point data. Point data can be added as x, y values or by click on the screen. A list of x, y values can be read from a text file also. The triangulation is built by adding each point one at a time. A virtual triangle of large proportions is added first so that any point added lies atleast within the virtual triangle. The virtual triangle or any edges connecting to the vertices of the virtual triangle are not displayed.
@@ -254,7 +258,7 @@
   <div id="Computer Graphics 2005" class="vtabcontent">
     <table style="border-left: 1px solid #ccc;"  cellpadding="20"><tr><td>
 
-    <p>All the projects given below were programmed using C++, OpenGL and MFC during computer graphics course taught by Prof. Nelson. <a href="http://www.holmes3d.net/graphics/skeleton/">OpenGLSkeleton</a> from holmes3d.net was used to simplify OpenGL based UI.</p>
+    <p>All the projects given below were programmed using C++, OpenGL and MFC during computer graphics course taught by Prof. Nelson in 2005. <a href="http://www.holmes3d.net/graphics/skeleton/">OpenGLSkeleton</a> from holmes3d.net was used to simplify OpenGL based UI.</p>
     <hr>
 		<h3 id="SmoothAnimations"> Fly through Smooth Animations using Keyframe</h3>
 				<p>In this project, visual animation of flythrough was developed by first capturing keyframes around an object using camera's postion and orientation. The six parameters are then used in interpolation using linear BSpline and C2 continuous BSpline under euler angles and quaternions.</p>
@@ -295,7 +299,7 @@
 </div>
 <div id="Finite Element Analysis 2004" class="vtabcontent">
     <table style="border-left: 1px solid #ccc;"  cellpadding="20"><tr><td>
-    <p>These two projects were completed in C++ and OpenGL as part of Graduate FEA programming course at ASU</p>
+    <p>These two projects were completed in C++ and OpenGL as part of Graduate FEA programming course at ASU in 2004.</p>
     	<h3>FEA Developer Projects: 3D Trusses</h3>
 		<p>
 			This project was an extension of the 2D project. Various trusses were taken as example cases. Two of the example are shown here. One for a cantilever type truss. Other one is simply supported beam on one end. Actual output was through a formatted text file.</p>
