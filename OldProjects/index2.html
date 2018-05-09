@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 25%;
+    height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    //border-left: none;
+
+}
+
+<!--- -->
+/* Style the tab */
+    [class^="tabh"]{
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+    }
+
+    /* Style the buttons inside the tab */
+    [class^="tabh"] button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+    }
+
+    /* Change background color of buttons on hover */
+    div.tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    div.tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+	}
+	/* Fade in tabs */
+	@-webkit-keyframes fadeEffect {
+	    from {opacity: 0;}
+	    to {opacity: 1;}
+	}
+
+	@keyframes fadeEffect {
+	    from {opacity: 0;}
+	    to {opacity: 1;}
+	}
+
+</style>
+</head>
+<body>
+<div id="wrapper" class="box" style="width:1000px; margin:0 auto;">
+	<center> <h1>Projects done between 2001 and 2007</h1></center>
+	<div class="tab">
+	<p><b>Research Projects</b></p>
+	  <button class="tablinks" onclick="openCity(event, 'Tolerancing 2002-2004')">Tolerancing 2002-2004</button>
+	  <button class="tablinks" onclick="openCity(event, 'Programming 2005-2007')">Programming 2005-2007</button>
+	<p><b>Course Projects</b></p>
+	  <button class="tablinks" onclick="openCity(event, 'Design 2002')">Design 2002</button>
+	  <button class="tablinks" onclick="openCity(event, 'Programming')" id="defaultOpen">Programming</button>
+	</div>
+	<div class="tabh1">
+	</div>
+	<div class="tabh2">
+	</div>
+	<div class="tabh3">
+	</div>
+	<div class="tabh4">
+	  <button class="tablinksh4" onclick="openCity(event, 'CAD')">CAD</button>
+	  <button class="tablinksh4" onclick="openCity(event, 'Computational Geometry')">Computational Geometry</button>
+	  <button class="tablinksh4" onclick="openCity(event, 'Computer Graphics')">Computer Graphics</button>
+	  <button class="tablinksh4" onclick="openCity(event, 'FEA')">FEA</button>
+	  <button class="tablinksh4" onclick="openCity(event, 'Others')">Others</button>
+	</div>
+	<div id="Tolerancing 2002-2004" class="tabcontent">
+			<h2>Black and Dekker Swing Arm Saw</h2>
+			<h2>Angular Features</h2>
+			<h2>Cluster of Features</h2>
+			<h2>Multi-constraint block</h2>
+	</div>
+
+	<div id="Programming 2005-2007" class="tabcontent">
+	  <h2>OpenGL T-Maps Creation</h2>
+			<h2>T-Maps convolution</h2>
+			<h2>T-Maps intersection computation</h2>
+	</div>
+
+	<div id="Design 2002" class="tabcontent">
+			<h2>Leonardo Vinci Mechanism</h2>
+			<h2>	Futuristic Car Surface Design</h2>
+			<h2>	Tolerance Analysis Comparison</h2>
+			<h2>	Chip Substrate Plate Design Report</h2>
+			<h2>	TRIZ for Conceptual Design</h2>
+	</div>
+
+	<div id="Programming" class="tabcontent">
+		 <h2>CAD 2002-2003</h2>
+		  <h3>ACIS Based CSG CAD with Volume Surface and Center Extraction</h3>
+		  <h3>ACIS Edge and Surface Picking for Feature Parameter Extraction</h3>
+		  <h2>Computational Geometry 2003</h2>
+		  <h3>Bezier Curves</h3>
+		  <p>CAGD Projects: Bezier Curves: To create a bezier curve, input in the form of control polygon is required. Mouse clicks on the screen adds the consecutive control points. The a degree of the curve is specified. Although degree and number of control points are linked but we might want two bezier curve from 9 CP of degree 4 (each with 5 CP and one common point for C0 continuity). Bezier curves are constructed using the DeCasteljau algorithm. Its easier to debug and visualize if the results at each step are correct. The resultant curve is also shown.</p>
+			<img src="untitled1.jpg" width="600">
+		  <p>The next figure shows multiple curves. Curve editing, by moving control point (see next figure), or by deleting a whole curve is also implemented. Curves can be translated or rotated. The purpose of the editing tool is create a meaningful shape by combining several curves. A conceptual shape of the car is created as the final task for the project.</p>
+			<img src="untitled3.jpg" width="300"><img src="untitled4.jpg" width="300">
+		  <p>Once a desirable shape is created, it can be store as a PostScript file. (Viewable with GSviewer). The control points can also be saved as separate text file so as to open and edit later using the same program.</p>
+		  	<img src="untitled6.jpg" width="600">
+		  <h3>Delaunay Triangulation and Voronoi</h3>
+		  <p>Delaunay Triangulation of a simple point data. Point data can be added as x, y values or by click on the screen. A list of x, y values can be read from a text file also. The triangulation is built by adding each point one at a time. A virtual triangle of large proportions is added first so that any point added lies atleast within the virtual triangle. The virtual triangle or any edges connecting to the vertices of the virtual triangle are not displayed.
+		  </p>
+		  <img src="Delaunay.jpg" width="600">
+
+		  <p>Convex hull of the point data.
+		  Each triangle's edge is queried for its neighbor having a vertex as the vertex of the virtual triangle. The edge across which such neighbor exists is the edge belonging to the convex hull.
+		  </p>
+		  <img src="Convex Hull.jpg" width="600">
+
+
+
+		  <p>A helpful tool to identify the neighbor of each triangle. This is helpful when debugging the code.</p>
+		   <img src="Query Triangle.jpg" width="600">
+
+		  <p>Voronoi diagram of the triangulation. Voronoi diagrams are the dual to the delaunay triangulation. Voronoi diagram can be obtained by connecting the circumcenter (center of the circumcircle) of each triangle to its neighbor's circumcenter. Voronoi diagrams have various uses in path planning but is also used in identifying the location of a mobile phone. Each polygon in the voronoi diagram represents the range served by each mobile tower. The location of the tower is the small circle (see fig.) in the voronoi polygon (vertex of delaunay triangulation).</p>
+		  <img src="Voronoi.jpg" width="600">
+
+		  <p>The adjacent figure shows an application of triangulation to create a triangular mesh, to be used in Finite Element Analysis. The respective Voronoi diagram is also displayed.</p>
+		  <img src="Voronoi and Delaunay(Mesh).jpg" width="600">
+		  </p>
+		  <h2>		Computer Graphics 2005</h2>
+		  <h2>		Finite Element Analysis 2004</h2>
+		  <h2>		Others 2002-2004</h2>
+					<h3>Shortest Path Algorithm (Travelling Salesman)</h3>
+					<h3>Line Follower and Constant Velocity Single Cylinder IC Engine Car</h3>
+					<h3>B+ trees</h3>
+	</div>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
