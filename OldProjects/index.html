@@ -163,12 +163,43 @@
 
 <div id="Research Coding" class="tabcontent">
 <center><table width="800" bgcolor="#F2F2F2"><tr><td>
-<h3>OpenGL T-Maps Creation and analysis</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AE-5SaVbCFk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-<hr>
-<h3>		T-Maps convolution</h3>
-<hr>
-<h3>		T-Maps intersection computation</h3>
+<h3> Tolerance Map for statistical and worst Case tolerance analysis</p>
+<p>A probability model for conducting statistical tolerance analysis and allocation is
+put forth in this dissertation. The model utilizes the ASU T-Maps model for geometric
+tolerances to build the frequency distribution for a dimension of interest in an assembly
+of parts. The central element of the ASU T-Maps model is the Tolerance-Map(T-Map);
+it is the range of points resulting from a one-to-one mapping from all the
+variational possibilities arising from the manufacture of a feature, within its tolerance-
+zone, to a specially designed Euclidean point-space. A functional T-Map represents both
+the acceptable range of one-dimensional dimension of interest and the acceptable limits
+to the three-dimensional variational possibilities of the target feature consistent with it.
+An accumulation T-Map represents all the accumulated three-dimensional variational
+possibilities of the target feature which arise from allowable variations on the individual
+parts in the assembly. The geometry of the target feature and a specific value of the
+dimension of interest are used to establish a functional surface that intersects the
+accumulation T-Map. The common points to the geometric shapes of the accumulation T-
+Map and the functional surface provide a measure of all variational possibilities of
+manufacture of the parts, which will give the specific value of the dimension of interest.
+By choosing many values of the dimension of interest, the measures are then arranged as
+a probability density function.</p>
+<p>Since, the ASU Tolerance-Map model is in conformance with alternate and
+supplemental specifications for tolerances in the ASME Y14.5 standard, the probability
+model also gives distinct results for each alternative and added refinement. The
+probability model from T-Maps presented in this thesis builds the probability
+distributions from the geometric bias of the tolerance zone and measurement type, while
+assuming equal likelihood of manufacturing biases. If consistent experimental data are
+available correlating the manufacturing biases to the position, orientation and form of a
+feature, these manufacturing biases can be included as weights when constructing the
+frequency distributions.</p>
+<p>The probability model is applied to several assemblies that contain planar
+features, an engaged pin and hole, an engaged tab and slot, a feature-cluster, and patterns
+of features. The results are compared with those from Monte Carlo simulations in
+commercial software.</p>
+<p>Implementation for worst case analysis dealt with (a) T-Map creation, (b) T-Map conformation for target, (c) T-Map accumulation, (d) T-Map fitting to function, (e) Compute sensitivity and allocate tolerances.</p>
+<p>Implementation for statistical analysis dealt with (a) Manufacturing distribution/bias selection, (b) T-Map conformation for target, (c) T-Map convolution using bias distributions, (d) S- surface computation based on inspection function, (e) Computing surface area of intersection of S- surface and Convolved T-Map for a given value of dimension of interest, and (f) building frequency distribution by varying the value of dimension of interest.</p>
+<p>Implementation was done in modular fashion so that the front end could be OpenGL based or ACIS based.</p>
+<p>Below are shown two demo's with OpenGL front end. First one shows creating T-Maps and conforming manually. The second one shows using CTF file (special ACIS/ASU tolerance constraint feature graph file) to load tolerance and use the testbed to conduct tolerance analysis</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AE-5SaVbCFk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br><br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7iLbgmxEIGg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <hr>
 </td></tr></table></center>
