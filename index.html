@@ -132,6 +132,18 @@ NRCli:before{
     background-color: #aaa;
 }
 
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
 .content {
     padding: 0 18px;
     display: none;
@@ -244,6 +256,8 @@ NRCli:before{
 <ul>
 <li>
 Additively Manufactured Lattice Inspection Challenges</li>
+<li>
+AM Design Rules using Ontology and Analytics (Led and Procured external funding $140,000)</li>
 <li>
 Data Analytics: Bayesian Networks in Predicting Part Performance for Laser-Powder Bed Fusion Process</li>
 <li>
@@ -1114,16 +1128,16 @@ function openCity(evt, cityName) {
   var coll = document.getElementsByClassName("collapsible");
    var i;
 
-   for (i = 0; i < coll.length; i++) {
-     coll[i].addEventListener("click", function() {
-       this.classList.toggle("active");
-       var content = this.nextElementSibling;
-       if (content.style.display === "block") {
-         content.style.display = "none";
-       } else {
-         content.style.display = "block";
-       }
-     });
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
 }
 
  </script>
