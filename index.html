@@ -143,22 +143,6 @@ NRCli:before{
 </head>
 
 <body>
-<script>
- var coll = document.getElementsByClassName("collapsible");
-  var i;
-
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    });
-}
-</script>
 <div id="wrapper" style="width:800px; margin:0 auto;">
 
 
@@ -1020,7 +1004,24 @@ function openCity(evt, cityName) {
       document.getElementById(cityName).style.display = "block";
       evt.currentTarget.className += " active";
 }
- document.getElementById("defaultOpen").click();</script>
+ document.getElementById("defaultOpen").click();
+
+  var coll = document.getElementsByClassName("collapsible");
+   var i;
+
+   for (i = 0; i < coll.length; i++) {
+     coll[i].addEventListener("click", function() {
+       this.classList.toggle("active");
+       var content = this.nextElementSibling;
+       if (content.style.display === "block") {
+         content.style.display = "none";
+       } else {
+         content.style.display = "block";
+       }
+     });
+}
+
+ </script>
 <!--End of the WSU Global Footer Zone. -->
 <!--The code below is for the print tool in the toolbar-->
 
