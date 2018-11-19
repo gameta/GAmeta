@@ -11,6 +11,21 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-119315791-1');
+
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+}
 </script>
 
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
@@ -231,6 +246,23 @@ Tolerancing Challenges with Additive Manufacturing (Led and procured external fu
 <li>
 Tolerance Evaluation for Additive Manufacturing (Led and advised two students, funding $20,000)</li>
 </ul>
+<button class="collapsible">Related Publications</button>
+<div class="content">
+  <p>Moges T., Ameta G., and Witherell P., "A Review Of Model And Parameter Uncertainties In Additive Manufacturing Models And Simulations", JMD, accepted.</p>
+  <p>Ameta G., and Witherell P., "Representation of Graded Materials and Structures to Support Tolerance Specification for Additive Manufacturing Applications", JCISE, accepted.</p>
+  <p>Ameta G., Fox J., and Witherell P., 2018, "Tolerancing and Verification of Additive Manufactured Lattice with Supplemental Surfaces", Procedia-CIRP, Vol. 75, pp 69-74.</p>
+  <p>Ameta G., Fox J., and Witherell P., 2018, "Tolerancing and Verification of Additive Manufactured Lattice with Supplemental Surfaces", CIRP International Seminar on Computer Aided Tolerancing, June 11-13th, Milan, IT.</p>
+  <p>Feng S.C., Witherell P., Ameta G., and Kim D. B., 2017, "Activity Model for Homogenization of Data Sets in Laser-based Powder Bed Fusion", Rapid Prototyping, Vol 23(1).</p>
+  <p>Ameta G., and Witherell P., "A Novel Transition Region Representation for Additive Manufacturing for Graded Materials, Structures and Tolerances", Proceedings of the ASME Computers and Information in Engineering Conference, ASME/CIE 2017-68390, August 6-9, 2017, Cleveland, OH, USA</p>
+  <p>Witherell P., Herron J., and Ameta G., 2016, "Towards Annotations and Product Definitions for Additive Manufacturing", Procedia CIRP 43, 339-344.</p>
+  <p>Witherell P., Herron J., and Ameta G., 2016, "Annotations and Product Definitions for Additive Manufacturing", CIRP Seminar on Computer Aided Tolerancing, 18-19 May, 2016, Gothenburg, Sweden.</p>
+  <p>Ameta G., Lipman R., Moylan S. and Witherell P., "Investigating the Role of Geometric Dimensioning and Tolerancing in Additive Manufacturing", Journal of Mechanical Design, Vol 137, Issue 11.</p>
+  <p>Ameta G., "Design issues in Additive Manufacturing", In Additive Manufacturing (eds Bandhypadhyay A. and Bose S.), CRC press.</p>
+  <p>Feng S. C, Witherell P. W., Ameta G., and Kim D. B.,"Common Requirements for Data Representations in Additive Manufacturing Processes", Proceedings of the ASME Manufacturing Science and Engineering Conference (MSEC) 15, ASME/MSEC 2015-9439, June 8-12, 2015, Charlotte, North Carolina, USA</p>
+  <p>Ameta G., Witherell P. W., Moylan S. and Lipman R.,"Tolerance Specification and Related Issues for Additively Manufactured Products", Proceedings of the ASME Computers and Information in Engineering Conference, ASME/CIE 2015-47531, August 2-5, 2015, Boston, MA, USA</p>
+  <p>Ameta G., Moylan S., Witherell P. W. and Lipman R.,"Challenges in Tolerance Transfer for Additive Manufacturing", ASPE 2015 Spring Topical Meeting, Achieving Precision Tolerances in Additive Manufacturing, North Carolina State University, Raleigh, North Carolina, USA, April 26-29, 2015</p>
+  <p>Anazi M., "Effects of Arm Positions in a Stereolithography Machine on Geometric Quality of Manfuactured Surface", M.S. Project Report, 2012, Washington State University, Pullman, WA.</p>
+</div>
 </blockquote>
 <hr>
 <h3>Sustainability</h3>
